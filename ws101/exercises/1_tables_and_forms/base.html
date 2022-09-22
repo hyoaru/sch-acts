@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Cabrera - WS101 Exer1</title>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div class="row my-5 py-3">
+            <div class="col"></div>
+            <div class="col col-sm-8 col-lg-5">
+                <table class="table align-middle">
+                    <thead>
+                        <tr class="text-center">
+                            <th scope="col" colspan="2">
+                                <h3>Personal Information</h3>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">First Name</th>
+                            <td><input class="form-control" type="text" placeholder="Enter your first name" required></td>
+                        </tr>                            <tr>
+                            <th scope="row">Middle Name</th>
+                            <td><input class="form-control" type="text" placeholder="Enter your middle name" required></td>
+                        </tr>
+    
+                        <tr>
+                            <th scope="row">Last Name</th>
+                            <td><input class="form-control" type="text" placeholder="Enter your last name" required></td>
+                        </tr>
+    
+                        <tr>
+                            <th scope="row">Course</th>
+                            <td>
+                                <select class="form-select">
+                                    <option selected>Choose a course</option>
+                                    <option value="1">BS Computer Science</option>
+                                    <option value="2">BS Information Technology</option>
+                                    <option value="3">BS Accountancy</option>
+                                    <option value="4">BS Nursing</option>
+                                </select>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <th scope="row">Year Level</th>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="radioYearLevel1" name="year_level">
+                                    <label for="radioYearLevel1" class="form-check-label">1st</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="radioYearLevel2" name="year_level">
+                                    <label for="radioYearLevel2" class="form-check-label">2nd</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="radioYearLevel3" name="year_level">
+                                    <label for="radioYearLevel3" class="form-check-label">3rd</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="radioYearLevel4" name="year_level">
+                                    <label for="radioYearLevel4" class="form-check-label">4th</label>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <th scope="row">Gender</th>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="radioGenderMale" name="gender">
+                                    <label for="radioGenderMale">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="radio" class="form-check-input" id="radioGenderFemale" name="gender">
+                                    <label for="radioGenderFemale">Female</label>
+                                </div>
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <th scope="row">Birthday</th>
+                            <td>
+                                <div class="row py-1">
+                                    <small class="col col-auto text-muted pt-1">My birthday is on</small>
+                                    <div class="form-check col border rounded ps-3 ms-2 me-2">
+                                        <input type="date" class="text-muted" style="border-style: None;" >
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Where did you learn about us?</th>
+                            <td>
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="checkFriends">
+                                    <label for="checkFriends" class="form-check-label">Friends</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="checkFamily">
+                                    <label for="checkFamily" class="form-check-label">Family</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="checkNewspaper">
+                                    <label for="checkNewspaper" class="form-check-label">Newspaper</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input type="checkbox" class="form-check-input" id="checkFacebookAds">
+                                    <label for="checkFacebookAds" class="form-check-label">Facebook Ads</label>
+                                </div>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">Suggestions</th>
+                            <td>
+                                <textarea class="form-control" name="suggestions" id="textAreaSuggestions" rows="2"></textarea>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <button class="btn btn-primary" type="submit">Submit</button>
+                            </td>
+                        </tr>
+                    </tfoot>
+        
+                </table>
+            </div>
+            <div class="col"></div>
+        </div>
+    </body>
+
+</html>
