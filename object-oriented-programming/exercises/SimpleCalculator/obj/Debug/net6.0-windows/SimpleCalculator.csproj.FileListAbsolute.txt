@@ -1,0 +1,17 @@
+D:\Developing\New\C#\SimpleCalculator\bin\Debug\net6.0-windows\SimpleCalculator.exe
+D:\Developing\New\C#\SimpleCalculator\bin\Debug\net6.0-windows\SimpleCalculator.deps.json
+D:\Developing\New\C#\SimpleCalculator\bin\Debug\net6.0-windows\SimpleCalculator.runtimeconfig.json
+D:\Developing\New\C#\SimpleCalculator\bin\Debug\net6.0-windows\SimpleCalculator.dll
+D:\Developing\New\C#\SimpleCalculator\bin\Debug\net6.0-windows\SimpleCalculator.pdb
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.csproj.AssemblyReference.cache
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.Form1.resources
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.csproj.GenerateResource.cache
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.GeneratedMSBuildEditorConfig.editorconfig
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.AssemblyInfoInputs.cache
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.AssemblyInfo.cs
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.csproj.CoreCompileInputs.cache
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.dll
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\refint\SimpleCalculator.dll
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.pdb
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\SimpleCalculator.genruntimeconfig.cache
+D:\Developing\New\C#\SimpleCalculator\obj\Debug\net6.0-windows\ref\SimpleCalculator.dll
