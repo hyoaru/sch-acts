@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WS101 Exam - Cabrera</title>
+    <link rel="stylesheet" href="base.css">
+</head>
+    <body>
+        <center>
+            <form action="#">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2"><h2>Registration Form</h2></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="lastName">Last Name</label>
+                            </th>
+                            <td>
+                                <input type="text" class="form-text" class="form-text" name="lastName" id="lastName" maxlength="30" placeholder="Enter your last name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="firstName">First Name</label>
+                            </th>
+                            <td>
+                                <input type="text" class="form-text" name="firstName" id="firstName" maxlength="50" placeholder="Enter your first name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="middleName">Middle Name</label>
+                            </th>
+                            <td>
+                                <input type="text" class="form-text" name="middleName" id="middleName" maxlength="30" placeholder="Enter your middle name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="gender">Gender</label>
+                            </th>
+                            <td>
+                                <label for="genderMale">
+                                    <input type="radio" name="gender" id="genderMale">
+                                    Male
+                                </label>
+                                <label for="genderFemale">
+                                    <input type="radio" name="gender" id="genderFemale">
+                                    Female
+                                </label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="birthday">Birthday</label>
+                            </th>
+                            <td>
+                                <input type="date" class="form-date" name="birthday" id="birthday">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="province">Province</label>
+                            </th>
+                            <td>
+                                <select name="province" class="form-select" id="province">
+                                    <option selected>Choose a province</option>
+                                    <option value="dummy1">Dummy 1</option>
+                                    <option value="dummy2">Dummy 2</option>
+                                    <option value="dummy3">Dummy 3</option>
+                                    <option value="dummy4">Dummy 4</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="baranggay">Baranggay</label>
+                            </th>
+                            <td>
+                                <select name="baranggay" class="form-select" id="baranggay">
+                                    <option selected>Choose a baranggay</option>
+                                    <option value="dummy1">Dummy 1</option>
+                                    <option value="dummy2">Dummy 2</option>
+                                    <option value="dummy3">Dummy 3</option>
+                                    <option value="dummy4">Dummy 4</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="city">City</label>
+                            </th>
+                            <td>
+                                <select name="city" class="form-select" id="city">
+                                    <option selected>Choose a city</option>
+                                    <option value="dummy1">Dummy 1</option>
+                                    <option value="dummy2">Dummy 2</option>
+                                    <option value="dummy3">Dummy 3</option>
+                                    <option value="dummy4">Dummy 4</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="addressLine">Address Line</label>
+                            </th>
+                            <td>
+                                <input type="text" class="form-text" name="addressLine" id="addressLine" placeholder="Enter your address line">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="zipCode">Zip Code</label>
+                            </th>
+                            <td>
+                                <input type="number" class="form-number" name="zipCode" id="zipCode" placeholder="Enter your zip code">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="email">Email</label>
+                            </th>
+                            <td>
+                                <input type="email" class="form-email" name="email" id="email" placeholder="Enter your email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="phoneNumber">Phone Number</label>
+                            </th>
+                            <td>
+                                <input type="number" class="form-number" name="phoneNumber" id="phoneNumber" placeholder="Enter your phone number">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="username">Username</label>
+                            </th>
+                            <td>
+                                <input type="text" class="form-text" name="username" id="username" maxlength="15" placeholder="Enter your username">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="password">Password</label>
+                            </th>
+                            <td>
+                                <input type="password" class="form-password" name="password" id="password" placeholder="Enter your desired password">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="userPicture">Upload <br>Your Picture</label>
+                            </th>
+                            <td>
+                                <input type="file" class="form-file" name="userPicture" id="userPicture">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="aboutMe">About Me</label>
+                            </th>
+                            <td>
+                                <textarea name="aboutMe" class="form-textarea" id="aboutMe" cols="30" rows="5"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row" class="form-label">
+                                <label for="membershipPaymentMethod">Membership <br>Payment Method</label>
+                            </th>
+                            <td>
+                                <select name="membershipPaymentMethod" class="form-select" id="membershipPaymentMethod">
+                                    <option selected>Choose payment method</option>
+                                    <option value="Credit Card">Credit Card</option>
+                                    <option value="Debit Card">Debit Card</option>
+                                    <option value="Cash">Cash</option>
+                                    <option value="Etc">Etc</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="button" class="button-submit" value="Submit">
+                                <input type="button" class="button-cancel" value="Cancel">
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </form>
+        </center>
+    </body>
+</html>

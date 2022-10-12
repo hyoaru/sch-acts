@@ -1,0 +1,102 @@
+/* HTML GLOBAL */
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+tbody {
+    text-align: left;
+}
+
+tfoot {
+    text-align: center;
+}
+
+th, td {
+    padding-bottom: .5em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+select option {
+    background-color: #ffffff;
+}
+
+/* CUSTOM */
+
+.form-label {
+    padding-right: 2em;
+}
+
+.form-text {
+    width: 100%;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.form-number {
+    width: 100%;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.form-email {
+    width: 100%;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.form-password {
+    width: 100%;
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.form-select {
+    width: calc(100% + 1.4em);
+    padding: .5em;
+    border-radius: .5em;
+    background-color: #ffffff;
+    color: #757575;
+}
+
+.form-file {
+    width: 100%;
+    padding: .5em;
+    border-radius: .5em;
+    color: #757575;
+}
+
+.form-date {
+    width: 100%;
+    padding: .5em;
+    border-radius: .5em;
+    color: #757575;
+}
+
+.form-textarea {
+    width: calc(100% + .1em);
+    padding: .5em;
+    border-radius: .5em;
+}
+
+.button-submit {
+    padding: .6em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: green;
+    border-radius: .5em;
+    color: #ffffff;
+    border-style: None;
+}
+
+.button-cancel {
+    padding: .6em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: firebrick;
+    border-radius: .5em;
+    color: #ffffff;
+    border-style: None;
+}

@@ -1,0 +1,9 @@
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\bin\Debug\PrelimCabrera.exe.config
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\bin\Debug\PrelimCabrera.exe
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\bin\Debug\PrelimCabrera.pdb
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\obj\Debug\PrelimCabrera.csprojResolveAssemblyReference.cache
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\obj\Debug\PrelimCabrera.Form1.resources
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\obj\Debug\PrelimCabrera.Properties.Resources.resources
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\obj\Debug\PrelimCabrera.csproj.GenerateResource.Cache
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\obj\Debug\PrelimCabrera.exe
+C:\Users\CCSLab-C\Documents\Cabrera, JenJade\PrelimCabrera\PrelimCabrera\obj\Debug\PrelimCabrera.pdb
