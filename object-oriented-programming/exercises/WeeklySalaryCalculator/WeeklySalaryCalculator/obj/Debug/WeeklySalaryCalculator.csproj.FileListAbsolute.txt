@@ -1,0 +1,9 @@
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\bin\Debug\WeeklySalaryCalculator.exe.config
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\bin\Debug\WeeklySalaryCalculator.exe
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\bin\Debug\WeeklySalaryCalculator.pdb
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\obj\Debug\WeeklySalaryCalculator.csprojResolveAssemblyReference.cache
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\obj\Debug\WeeklySalaryCalculator.WeeklySalaryCalculatorForm.resources
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\obj\Debug\WeeklySalaryCalculator.Properties.Resources.resources
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\obj\Debug\WeeklySalaryCalculator.csproj.GenerateResource.Cache
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\obj\Debug\WeeklySalaryCalculator.exe
+D:\Developing\New\C#\WeeklySalaryCalculator\WeeklySalaryCalculator\obj\Debug\WeeklySalaryCalculator.pdb
