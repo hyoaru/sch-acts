@@ -1,7 +1,6 @@
 package midtermsgui;
 
 import java.util.Random;
-import java.util.Arrays;
 
 public class MainForm extends javax.swing.JFrame {
     private Random random = new Random();
@@ -42,6 +41,7 @@ public class MainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btgArrayOptions = new javax.swing.ButtonGroup();
         pnlFormMain = new javax.swing.JPanel();
         pnlMainHeader = new javax.swing.JPanel();
         lblFormMain = new javax.swing.JLabel();
@@ -74,6 +74,16 @@ public class MainForm extends javax.swing.JFrame {
         txtBox7ArraySectionMerged = new javax.swing.JTextField();
         txtBox8ArraySectionMerged = new javax.swing.JTextField();
         btnMergeArraySectionMerged = new javax.swing.JButton();
+        pnlArrayOptions = new javax.swing.JPanel();
+        lblArrayOptions = new javax.swing.JLabel();
+        pnlArrayOptionsBtnGroup = new javax.swing.JPanel();
+        btnArrayOptionsArray1 = new javax.swing.JRadioButton();
+        btnArrayOptionsArray2 = new javax.swing.JRadioButton();
+        btnArrayOptionsArrayMerged = new javax.swing.JRadioButton();
+        tpnOperations = new javax.swing.JTabbedPane();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jTabbedPane4 = new javax.swing.JTabbedPane();
+        jTabbedPane5 = new javax.swing.JTabbedPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -113,7 +123,7 @@ public class MainForm extends javax.swing.JFrame {
         lblArraySectionMainFirst.setAlignmentY(0.0F);
 
         pnlArraySectionBodyFirst.setBackground(new java.awt.Color(255, 255, 255));
-        pnlArraySectionBodyFirst.setLayout(new java.awt.GridLayout());
+        pnlArraySectionBodyFirst.setLayout(new java.awt.GridLayout(1, 0));
 
         txtBox1ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtBox1ArraySectionFirst.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -181,7 +191,7 @@ public class MainForm extends javax.swing.JFrame {
         lblArraySectionMainSecond.setAlignmentY(0.0F);
 
         pnlArraySectionBodySecond.setBackground(new java.awt.Color(255, 255, 255));
-        pnlArraySectionBodySecond.setLayout(new java.awt.GridLayout());
+        pnlArraySectionBodySecond.setLayout(new java.awt.GridLayout(1, 0));
 
         txtBox1ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtBox1ArraySectionSecond.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -249,7 +259,7 @@ public class MainForm extends javax.swing.JFrame {
         lblArraySectionMainMerged.setAlignmentY(0.0F);
 
         pnlArraySectionBodyMerged.setBackground(new java.awt.Color(255, 255, 255));
-        pnlArraySectionBodyMerged.setLayout(new java.awt.GridLayout());
+        pnlArraySectionBodyMerged.setLayout(new java.awt.GridLayout(1, 0));
 
         txtBox1ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         txtBox1ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
@@ -356,6 +366,54 @@ public class MainForm extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        pnlArrayOptions.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblArrayOptions.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+        lblArrayOptions.setText("Array Options");
+        lblArrayOptions.setAlignmentY(0.0F);
+
+        pnlArrayOptionsBtnGroup.setBackground(new java.awt.Color(255, 255, 255));
+        pnlArrayOptionsBtnGroup.setLayout(new java.awt.GridLayout(1, 0));
+
+        btgArrayOptions.add(btnArrayOptionsArray1);
+        btnArrayOptionsArray1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        btnArrayOptionsArray1.setText("Array 1");
+        pnlArrayOptionsBtnGroup.add(btnArrayOptionsArray1);
+
+        btgArrayOptions.add(btnArrayOptionsArray2);
+        btnArrayOptionsArray2.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        btnArrayOptionsArray2.setText("Array 2");
+        pnlArrayOptionsBtnGroup.add(btnArrayOptionsArray2);
+
+        btgArrayOptions.add(btnArrayOptionsArrayMerged);
+        btnArrayOptionsArrayMerged.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        btnArrayOptionsArrayMerged.setText("Array Merged");
+        pnlArrayOptionsBtnGroup.add(btnArrayOptionsArrayMerged);
+
+        javax.swing.GroupLayout pnlArrayOptionsLayout = new javax.swing.GroupLayout(pnlArrayOptions);
+        pnlArrayOptions.setLayout(pnlArrayOptionsLayout);
+        pnlArrayOptionsLayout.setHorizontalGroup(
+            pnlArrayOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlArrayOptionsLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(lblArrayOptions, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlArrayOptionsBtnGroup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        pnlArrayOptionsLayout.setVerticalGroup(
+            pnlArrayOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblArrayOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlArrayOptionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlArrayOptionsBtnGroup, javax.swing.GroupLayout.DEFAULT_SIZE, 26, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        tpnOperations.addTab("tab1", jTabbedPane1);
+        tpnOperations.addTab("tab2", jTabbedPane4);
+        tpnOperations.addTab("tab3", jTabbedPane5);
+
         javax.swing.GroupLayout pnlFormMainLayout = new javax.swing.GroupLayout(pnlFormMain);
         pnlFormMain.setLayout(pnlFormMainLayout);
         pnlFormMainLayout.setHorizontalGroup(
@@ -363,7 +421,10 @@ public class MainForm extends javax.swing.JFrame {
             .addComponent(pnlMainHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlFormMainLayout.createSequentialGroup()
                 .addGap(112, 112, 112)
-                .addComponent(pnlArraysCluster, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlFormMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(pnlArrayOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pnlArraysCluster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tpnOperations))
                 .addContainerGap(116, Short.MAX_VALUE))
         );
         pnlFormMainLayout.setVerticalGroup(
@@ -373,7 +434,11 @@ public class MainForm extends javax.swing.JFrame {
                 .addComponent(pnlMainHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlArraysCluster, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlArrayOptions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(tpnOperations, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(103, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -388,6 +453,7 @@ public class MainForm extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void generateRandomNumbers(javax.swing.JTextField[] textFieldRepresentationArray, int[] array){
@@ -417,7 +483,6 @@ public class MainForm extends javax.swing.JFrame {
     }
     
     private boolean arrayIsEmpty(int[] array){
-        boolean isEmpty;
         for (int value : array){
             if (value == 0){
                 continue;
@@ -450,13 +515,23 @@ public class MainForm extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup btgArrayOptions;
+    private javax.swing.JRadioButton btnArrayOptionsArray1;
+    private javax.swing.JRadioButton btnArrayOptionsArray2;
+    private javax.swing.JRadioButton btnArrayOptionsArrayMerged;
     private javax.swing.JButton btnGenerateArraySectionFirst;
     private javax.swing.JButton btnGenerateArraySectionSecond;
     private javax.swing.JButton btnMergeArraySectionMerged;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPane4;
+    private javax.swing.JTabbedPane jTabbedPane5;
+    private javax.swing.JLabel lblArrayOptions;
     private javax.swing.JLabel lblArraySectionMainFirst;
     private javax.swing.JLabel lblArraySectionMainMerged;
     private javax.swing.JLabel lblArraySectionMainSecond;
     private javax.swing.JLabel lblFormMain;
+    private javax.swing.JPanel pnlArrayOptions;
+    private javax.swing.JPanel pnlArrayOptionsBtnGroup;
     private javax.swing.JPanel pnlArraySectionBodyFirst;
     private javax.swing.JPanel pnlArraySectionBodyMerged;
     private javax.swing.JPanel pnlArraySectionBodySecond;
@@ -466,6 +541,7 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JPanel pnlArraysCluster;
     private javax.swing.JPanel pnlFormMain;
     private javax.swing.JPanel pnlMainHeader;
+    private javax.swing.JTabbedPane tpnOperations;
     private javax.swing.JTextField txtBox1ArraySectionFirst;
     private javax.swing.JTextField txtBox1ArraySectionMerged;
     private javax.swing.JTextField txtBox1ArraySectionSecond;
