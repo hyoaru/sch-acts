@@ -1,5 +1,6 @@
 package midtermsgui;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class MainForm extends javax.swing.JFrame {
@@ -13,6 +14,8 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField[] textFieldRepresentationArray2;
     private javax.swing.JTextField[] textFieldRepresentationArrayMerged;
     
+    private javax.swing.JRadioButton[] arrayOption;
+        
     public MainForm() {
         initComponents();
         
@@ -34,7 +37,13 @@ public class MainForm extends javax.swing.JFrame {
         array1 = new int[textFieldRepresentationArray1.length];
         array2 = new int[textFieldRepresentationArray2.length];
         arrayMerged = new int[textFieldRepresentationArrayMerged.length];
-
+        
+        arrayOption = new javax.swing.JRadioButton[]{
+            rdoArrayOptionsArray1, rdoArrayOptionsArray2,
+            rdoArrayOptionsArrayMerged
+        };
+        
+        arrayOption[0].setSelected(true);
     }
     
     @SuppressWarnings("unchecked")
@@ -77,13 +86,21 @@ public class MainForm extends javax.swing.JFrame {
         pnlArrayOptions = new javax.swing.JPanel();
         lblArrayOptions = new javax.swing.JLabel();
         pnlArrayOptionsBtnGroup = new javax.swing.JPanel();
-        btnArrayOptionsArray1 = new javax.swing.JRadioButton();
-        btnArrayOptionsArray2 = new javax.swing.JRadioButton();
-        btnArrayOptionsArrayMerged = new javax.swing.JRadioButton();
+        rdoArrayOptionsArray1 = new javax.swing.JRadioButton();
+        rdoArrayOptionsArray2 = new javax.swing.JRadioButton();
+        rdoArrayOptionsArrayMerged = new javax.swing.JRadioButton();
         tpnOperations = new javax.swing.JTabbedPane();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jTabbedPane4 = new javax.swing.JTabbedPane();
-        jTabbedPane5 = new javax.swing.JTabbedPane();
+        pnlOperationsFindAndReplace = new javax.swing.JPanel();
+        pnlOperationsFindAndReplaceSectionInputOutput = new javax.swing.JPanel();
+        lblOperationFind = new javax.swing.JLabel();
+        spnOperationFind = new javax.swing.JSpinner();
+        lblOperationReplace = new javax.swing.JLabel();
+        spnOperationReplace = new javax.swing.JSpinner();
+        lblOperationFoundAt = new javax.swing.JLabel();
+        txtOperationFoundAt = new javax.swing.JTextField();
+        pnlOperationsFindAndReplaceSectionOperations = new javax.swing.JPanel();
+        cmbOperationOptions = new javax.swing.JComboBox<>();
+        btnOperationExecute = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setAutoRequestFocus(false);
@@ -118,38 +135,33 @@ public class MainForm extends javax.swing.JFrame {
         pnlArraySectionMainFirst.setBackground(new java.awt.Color(255, 255, 255));
         pnlArraySectionMainFirst.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(231, 231, 231), 1, true));
 
-        lblArraySectionMainFirst.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblArraySectionMainFirst.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblArraySectionMainFirst.setText("Array 1");
         lblArraySectionMainFirst.setAlignmentY(0.0F);
 
         pnlArraySectionBodyFirst.setBackground(new java.awt.Color(255, 255, 255));
         pnlArraySectionBodyFirst.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtBox1ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox1ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox1ArraySectionFirst.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox1ArraySectionFirst.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox1ArraySectionFirst.setEnabled(false);
         pnlArraySectionBodyFirst.add(txtBox1ArraySectionFirst);
 
-        txtBox2ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox2ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox2ArraySectionFirst.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox2ArraySectionFirst.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox2ArraySectionFirst.setEnabled(false);
         pnlArraySectionBodyFirst.add(txtBox2ArraySectionFirst);
 
-        txtBox3ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox3ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox3ArraySectionFirst.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox3ArraySectionFirst.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox3ArraySectionFirst.setEnabled(false);
         pnlArraySectionBodyFirst.add(txtBox3ArraySectionFirst);
 
-        txtBox4ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox4ArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox4ArraySectionFirst.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtBox4ArraySectionFirst.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox4ArraySectionFirst.setEnabled(false);
         pnlArraySectionBodyFirst.add(txtBox4ArraySectionFirst);
 
-        btnGenerateArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        btnGenerateArraySectionFirst.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         btnGenerateArraySectionFirst.setText("Generate");
         btnGenerateArraySectionFirst.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -186,38 +198,34 @@ public class MainForm extends javax.swing.JFrame {
         pnlArraySectionMainSecond.setBackground(new java.awt.Color(255, 255, 255));
         pnlArraySectionMainSecond.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(231, 231, 231), 1, true));
 
-        lblArraySectionMainSecond.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblArraySectionMainSecond.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblArraySectionMainSecond.setText("Array 2");
         lblArraySectionMainSecond.setAlignmentY(0.0F);
 
         pnlArraySectionBodySecond.setBackground(new java.awt.Color(255, 255, 255));
         pnlArraySectionBodySecond.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtBox1ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox1ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox1ArraySectionSecond.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox1ArraySectionSecond.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox1ArraySectionSecond.setEnabled(false);
         pnlArraySectionBodySecond.add(txtBox1ArraySectionSecond);
 
-        txtBox2ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox2ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox2ArraySectionSecond.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox2ArraySectionSecond.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox2ArraySectionSecond.setEnabled(false);
         pnlArraySectionBodySecond.add(txtBox2ArraySectionSecond);
 
-        txtBox3ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox3ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox3ArraySectionSecond.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox3ArraySectionSecond.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox3ArraySectionSecond.setEnabled(false);
         pnlArraySectionBodySecond.add(txtBox3ArraySectionSecond);
 
-        txtBox4ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox4ArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox4ArraySectionSecond.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox4ArraySectionSecond.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox4ArraySectionSecond.setEnabled(false);
         pnlArraySectionBodySecond.add(txtBox4ArraySectionSecond);
 
-        btnGenerateArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        btnGenerateArraySectionSecond.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         btnGenerateArraySectionSecond.setText("Generate");
         btnGenerateArraySectionSecond.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -254,62 +262,54 @@ public class MainForm extends javax.swing.JFrame {
         pnlArraySectionMainMerged.setBackground(new java.awt.Color(255, 255, 255));
         pnlArraySectionMainMerged.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(231, 231, 231), 1, true));
 
-        lblArraySectionMainMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        lblArraySectionMainMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         lblArraySectionMainMerged.setText("Merged");
         lblArraySectionMainMerged.setAlignmentY(0.0F);
 
         pnlArraySectionBodyMerged.setBackground(new java.awt.Color(255, 255, 255));
         pnlArraySectionBodyMerged.setLayout(new java.awt.GridLayout(1, 0));
 
-        txtBox1ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox1ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox1ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox1ArraySectionMerged.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox1ArraySectionMerged.setEnabled(false);
         pnlArraySectionBodyMerged.add(txtBox1ArraySectionMerged);
 
-        txtBox2ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox2ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox2ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox2ArraySectionMerged.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox2ArraySectionMerged.setEnabled(false);
         pnlArraySectionBodyMerged.add(txtBox2ArraySectionMerged);
 
-        txtBox3ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox3ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox3ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox3ArraySectionMerged.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox3ArraySectionMerged.setEnabled(false);
         pnlArraySectionBodyMerged.add(txtBox3ArraySectionMerged);
 
-        txtBox4ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox4ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox4ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox4ArraySectionMerged.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox4ArraySectionMerged.setEnabled(false);
         pnlArraySectionBodyMerged.add(txtBox4ArraySectionMerged);
 
-        txtBox5ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox5ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox5ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox5ArraySectionMerged.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox5ArraySectionMerged.setEnabled(false);
         pnlArraySectionBodyMerged.add(txtBox5ArraySectionMerged);
 
-        txtBox6ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox6ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox6ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox6ArraySectionMerged.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox6ArraySectionMerged.setEnabled(false);
         pnlArraySectionBodyMerged.add(txtBox6ArraySectionMerged);
 
-        txtBox7ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox7ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox7ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox7ArraySectionMerged.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox7ArraySectionMerged.setEnabled(false);
         pnlArraySectionBodyMerged.add(txtBox7ArraySectionMerged);
 
-        txtBox8ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtBox8ArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         txtBox8ArraySectionMerged.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txtBox8ArraySectionMerged.setDisabledTextColor(new java.awt.Color(0, 0, 0));
-        txtBox8ArraySectionMerged.setEnabled(false);
         pnlArraySectionBodyMerged.add(txtBox8ArraySectionMerged);
 
-        btnMergeArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 1, 10)); // NOI18N
+        btnMergeArraySectionMerged.setFont(new java.awt.Font("Segoe UI", 0, 10)); // NOI18N
         btnMergeArraySectionMerged.setText("Merge");
         btnMergeArraySectionMerged.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -375,20 +375,20 @@ public class MainForm extends javax.swing.JFrame {
         pnlArrayOptionsBtnGroup.setBackground(new java.awt.Color(255, 255, 255));
         pnlArrayOptionsBtnGroup.setLayout(new java.awt.GridLayout(1, 0));
 
-        btgArrayOptions.add(btnArrayOptionsArray1);
-        btnArrayOptionsArray1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-        btnArrayOptionsArray1.setText("Array 1");
-        pnlArrayOptionsBtnGroup.add(btnArrayOptionsArray1);
+        btgArrayOptions.add(rdoArrayOptionsArray1);
+        rdoArrayOptionsArray1.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        rdoArrayOptionsArray1.setText("Array 1");
+        pnlArrayOptionsBtnGroup.add(rdoArrayOptionsArray1);
 
-        btgArrayOptions.add(btnArrayOptionsArray2);
-        btnArrayOptionsArray2.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-        btnArrayOptionsArray2.setText("Array 2");
-        pnlArrayOptionsBtnGroup.add(btnArrayOptionsArray2);
+        btgArrayOptions.add(rdoArrayOptionsArray2);
+        rdoArrayOptionsArray2.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        rdoArrayOptionsArray2.setText("Array 2");
+        pnlArrayOptionsBtnGroup.add(rdoArrayOptionsArray2);
 
-        btgArrayOptions.add(btnArrayOptionsArrayMerged);
-        btnArrayOptionsArrayMerged.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
-        btnArrayOptionsArrayMerged.setText("Array Merged");
-        pnlArrayOptionsBtnGroup.add(btnArrayOptionsArrayMerged);
+        btgArrayOptions.add(rdoArrayOptionsArrayMerged);
+        rdoArrayOptionsArrayMerged.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        rdoArrayOptionsArrayMerged.setText("Array Merged");
+        pnlArrayOptionsBtnGroup.add(rdoArrayOptionsArrayMerged);
 
         javax.swing.GroupLayout pnlArrayOptionsLayout = new javax.swing.GroupLayout(pnlArrayOptions);
         pnlArrayOptions.setLayout(pnlArrayOptionsLayout);
@@ -410,9 +410,107 @@ public class MainForm extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        tpnOperations.addTab("tab1", jTabbedPane1);
-        tpnOperations.addTab("tab2", jTabbedPane4);
-        tpnOperations.addTab("tab3", jTabbedPane5);
+        tpnOperations.setBackground(new java.awt.Color(255, 255, 255));
+        tpnOperations.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        pnlOperationsFindAndReplace.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlOperationsFindAndReplaceSectionInputOutput.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblOperationFind.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        lblOperationFind.setText("Find");
+
+        lblOperationReplace.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        lblOperationReplace.setText("Replace with");
+
+        lblOperationFoundAt.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        lblOperationFoundAt.setText("Found at ");
+
+        javax.swing.GroupLayout pnlOperationsFindAndReplaceSectionInputOutputLayout = new javax.swing.GroupLayout(pnlOperationsFindAndReplaceSectionInputOutput);
+        pnlOperationsFindAndReplaceSectionInputOutput.setLayout(pnlOperationsFindAndReplaceSectionInputOutputLayout);
+        pnlOperationsFindAndReplaceSectionInputOutputLayout.setHorizontalGroup(
+            pnlOperationsFindAndReplaceSectionInputOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOperationsFindAndReplaceSectionInputOutputLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(lblOperationFind, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(spnOperationFind, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(lblOperationReplace, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(spnOperationReplace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24)
+                .addComponent(lblOperationFoundAt, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtOperationFoundAt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27))
+        );
+        pnlOperationsFindAndReplaceSectionInputOutputLayout.setVerticalGroup(
+            pnlOperationsFindAndReplaceSectionInputOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOperationsFindAndReplaceSectionInputOutputLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlOperationsFindAndReplaceSectionInputOutputLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblOperationReplace, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(spnOperationFind, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(spnOperationReplace, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblOperationFoundAt, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                    .addComponent(lblOperationFind, javax.swing.GroupLayout.DEFAULT_SIZE, 24, Short.MAX_VALUE)
+                    .addComponent(txtOperationFoundAt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+        );
+
+        pnlOperationsFindAndReplaceSectionOperations.setBackground(new java.awt.Color(255, 255, 255));
+
+        cmbOperationOptions.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        cmbOperationOptions.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Find", "Replace" }));
+
+        btnOperationExecute.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        btnOperationExecute.setText("Execute");
+        btnOperationExecute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnOperationExecuteActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlOperationsFindAndReplaceSectionOperationsLayout = new javax.swing.GroupLayout(pnlOperationsFindAndReplaceSectionOperations);
+        pnlOperationsFindAndReplaceSectionOperations.setLayout(pnlOperationsFindAndReplaceSectionOperationsLayout);
+        pnlOperationsFindAndReplaceSectionOperationsLayout.setHorizontalGroup(
+            pnlOperationsFindAndReplaceSectionOperationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOperationsFindAndReplaceSectionOperationsLayout.createSequentialGroup()
+                .addGap(120, 120, 120)
+                .addComponent(cmbOperationOptions, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnOperationExecute, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        pnlOperationsFindAndReplaceSectionOperationsLayout.setVerticalGroup(
+            pnlOperationsFindAndReplaceSectionOperationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlOperationsFindAndReplaceSectionOperationsLayout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addGroup(pnlOperationsFindAndReplaceSectionOperationsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnOperationExecute, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(cmbOperationOptions))
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout pnlOperationsFindAndReplaceLayout = new javax.swing.GroupLayout(pnlOperationsFindAndReplace);
+        pnlOperationsFindAndReplace.setLayout(pnlOperationsFindAndReplaceLayout);
+        pnlOperationsFindAndReplaceLayout.setHorizontalGroup(
+            pnlOperationsFindAndReplaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlOperationsFindAndReplaceSectionInputOutput, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnlOperationsFindAndReplaceSectionOperations, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        pnlOperationsFindAndReplaceLayout.setVerticalGroup(
+            pnlOperationsFindAndReplaceLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlOperationsFindAndReplaceLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlOperationsFindAndReplaceSectionInputOutput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlOperationsFindAndReplaceSectionOperations, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE))
+        );
+
+        tpnOperations.addTab("Find and Replace", pnlOperationsFindAndReplace);
 
         javax.swing.GroupLayout pnlFormMainLayout = new javax.swing.GroupLayout(pnlFormMain);
         pnlFormMain.setLayout(pnlFormMainLayout);
@@ -420,25 +518,25 @@ public class MainForm extends javax.swing.JFrame {
             pnlFormMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlMainHeader, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlFormMainLayout.createSequentialGroup()
-                .addGap(112, 112, 112)
+                .addGap(113, 113, 113)
                 .addGroup(pnlFormMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(pnlArrayOptions, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(pnlArraysCluster, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tpnOperations))
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         pnlFormMainLayout.setVerticalGroup(
             pnlFormMainLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlFormMainLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
+                .addGap(53, 53, 53)
                 .addComponent(pnlMainHeader, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlArraysCluster, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlArrayOptions, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(tpnOperations, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(103, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(tpnOperations, javax.swing.GroupLayout.PREFERRED_SIZE, 129, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -456,6 +554,7 @@ public class MainForm extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    // Generating random numbers section and its related functions
     private void generateRandomNumbers(javax.swing.JTextField[] textFieldRepresentationArray, int[] array){
         int randomNumber;
         for (int i = 0; i < textFieldRepresentationArray.length; i++) {
@@ -465,6 +564,7 @@ public class MainForm extends javax.swing.JFrame {
         }
     }
     
+    // Merging arrays section and its related functions
     private void mergeArrays(int[][] arrayOfArraysToMerge){
         int indexOfMergedArray = 0;
         int numbersOfArrayIterated = 0;
@@ -484,14 +584,102 @@ public class MainForm extends javax.swing.JFrame {
     
     private boolean arrayIsEmpty(int[] array){
         for (int value : array){
-            if (value == 0){
-                continue;
-            } else {
+            if (value != 0){
                 return false;
             }
         }
-        
         return true;
+    }
+    
+    // Getting selected array section
+    private String getSelectedArrayOption(){
+        for (javax.swing.JRadioButton button: arrayOption){
+            if (button.isSelected()){
+                return button.getText();
+            }
+        }
+        return null;
+    }
+    
+    // Find and replace section and its related functions
+    private int[] arrayParseToIntegerFromString(String[] arrayToParse){
+        int[] arrayParsedToInteger = new int[arrayToParse.length];
+        for (int i = 0; i < arrayToParse.length; i++){
+            arrayParsedToInteger[i] = Integer.parseInt(arrayToParse[i]);
+        }
+        return arrayParsedToInteger;
+    }
+    
+    private int[] getIndexesOfNumberToFind(int[] arrayToSearch){
+        String foundAtIndexesStringified = "";
+        int numberToFind = (int) spnOperationFind.getValue();
+        
+        for (int i = 0; i < arrayToSearch.length; i++){
+            int fetchedNumberFromArray = arrayToSearch[i];
+            if (fetchedNumberFromArray == numberToFind){
+                foundAtIndexesStringified += String.format("%d ", i);
+            }
+        }
+        
+        int[] foundAtIndexes = arrayParseToIntegerFromString(foundAtIndexesStringified.split(" "));
+        return foundAtIndexes;
+    }
+    
+    private void replaceValuesByIndex(
+        javax.swing.JTextField[] textFieldRepresentationArray, 
+        int[] arrayToSearch, int[] indexArray){
+            int numberToReplace = (int) spnOperationReplace.getValue();
+
+            for (int indexToReplace : indexArray) {
+                arrayToSearch[indexToReplace] = numberToReplace;
+                textFieldRepresentationArray[indexToReplace].setText(String.valueOf(numberToReplace));
+            }
+        }
+    
+    private void operationFind(){
+        String arrayToUse = getSelectedArrayOption();
+        int[] indexesFoundAt;
+        
+        switch (arrayToUse) {
+            case "Array 1":
+                indexesFoundAt = getIndexesOfNumberToFind(array1);
+                txtOperationFoundAt.setText(Arrays.toString(indexesFoundAt));
+                break;
+            case "Array 2":
+                indexesFoundAt = getIndexesOfNumberToFind(array2);
+                txtOperationFoundAt.setText(Arrays.toString(indexesFoundAt));
+                break;
+            case "Array Merged":
+                indexesFoundAt = getIndexesOfNumberToFind(arrayMerged);
+                txtOperationFoundAt.setText(Arrays.toString(indexesFoundAt));
+                break;                
+        }
+    }
+    
+    private void operationReplace(){
+        int[] indexesToReplaceValues;       
+        String arrayToUse = getSelectedArrayOption();
+        
+        switch (arrayToUse) {
+            case "Array 1":
+                indexesToReplaceValues = getIndexesOfNumberToFind(array1);
+                replaceValuesByIndex(
+                        textFieldRepresentationArray1, array1, 
+                        indexesToReplaceValues);
+                break;
+            case "Array 2":
+                indexesToReplaceValues = getIndexesOfNumberToFind(array2);
+                replaceValuesByIndex(
+                        textFieldRepresentationArray2, array2, 
+                        indexesToReplaceValues);
+                break;
+            case "Array Merged":
+                indexesToReplaceValues = getIndexesOfNumberToFind(arrayMerged);
+                replaceValuesByIndex(
+                        textFieldRepresentationArrayMerged, arrayMerged, 
+                        indexesToReplaceValues);
+                break;                
+        }        
     }
     
     private void btnGenerateArraySectionFirstActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateArraySectionFirstActionPerformed
@@ -513,23 +701,36 @@ public class MainForm extends javax.swing.JFrame {
         mergeArrays(arrayOfArraysToMerge);
     }//GEN-LAST:event_btnMergeArraySectionMergedActionPerformed
 
+    private void btnOperationExecuteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOperationExecuteActionPerformed
+        txtOperationFoundAt.setText("");
+        String selectedOperation = cmbOperationOptions.getSelectedItem().toString();
+        
+        switch (selectedOperation) {
+            case "Find":
+                operationFind();
+                break;
+            case "Replace":
+                operationReplace();
+                break;
+        }
+    }//GEN-LAST:event_btnOperationExecuteActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btgArrayOptions;
-    private javax.swing.JRadioButton btnArrayOptionsArray1;
-    private javax.swing.JRadioButton btnArrayOptionsArray2;
-    private javax.swing.JRadioButton btnArrayOptionsArrayMerged;
     private javax.swing.JButton btnGenerateArraySectionFirst;
     private javax.swing.JButton btnGenerateArraySectionSecond;
     private javax.swing.JButton btnMergeArraySectionMerged;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTabbedPane jTabbedPane4;
-    private javax.swing.JTabbedPane jTabbedPane5;
+    private javax.swing.JButton btnOperationExecute;
+    private javax.swing.JComboBox<String> cmbOperationOptions;
     private javax.swing.JLabel lblArrayOptions;
     private javax.swing.JLabel lblArraySectionMainFirst;
     private javax.swing.JLabel lblArraySectionMainMerged;
     private javax.swing.JLabel lblArraySectionMainSecond;
     private javax.swing.JLabel lblFormMain;
+    private javax.swing.JLabel lblOperationFind;
+    private javax.swing.JLabel lblOperationFoundAt;
+    private javax.swing.JLabel lblOperationReplace;
     private javax.swing.JPanel pnlArrayOptions;
     private javax.swing.JPanel pnlArrayOptionsBtnGroup;
     private javax.swing.JPanel pnlArraySectionBodyFirst;
@@ -541,6 +742,14 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JPanel pnlArraysCluster;
     private javax.swing.JPanel pnlFormMain;
     private javax.swing.JPanel pnlMainHeader;
+    private javax.swing.JPanel pnlOperationsFindAndReplace;
+    private javax.swing.JPanel pnlOperationsFindAndReplaceSectionInputOutput;
+    private javax.swing.JPanel pnlOperationsFindAndReplaceSectionOperations;
+    private javax.swing.JRadioButton rdoArrayOptionsArray1;
+    private javax.swing.JRadioButton rdoArrayOptionsArray2;
+    private javax.swing.JRadioButton rdoArrayOptionsArrayMerged;
+    private javax.swing.JSpinner spnOperationFind;
+    private javax.swing.JSpinner spnOperationReplace;
     private javax.swing.JTabbedPane tpnOperations;
     private javax.swing.JTextField txtBox1ArraySectionFirst;
     private javax.swing.JTextField txtBox1ArraySectionMerged;
@@ -558,5 +767,6 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JTextField txtBox6ArraySectionMerged;
     private javax.swing.JTextField txtBox7ArraySectionMerged;
     private javax.swing.JTextField txtBox8ArraySectionMerged;
+    private javax.swing.JTextField txtOperationFoundAt;
     // End of variables declaration//GEN-END:variables
   }

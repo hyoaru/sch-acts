@@ -9,7 +9,7 @@ public class App {
         try {
             UIManager.setLookAndFeel(new FlatIntelliJLaf());
         } catch (UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
+            System.out.println(e.getMessage());
         }
         java.awt.EventQueue.invokeLater(
             new Runnable() {
