@@ -19,7 +19,7 @@ namespace WeeklySalaryCalculator {
 
         public static Dictionary<string, int> PositionAllowanceMap =
             new Dictionary<string, int> {
-                {"Regular", 1000}, { "Probationary", 500}, {"Part-time", 1000}
+                {"Regular", 1000}, { "Probationary", 500}, {"Part-time", 100}
             };
 
         public double ComputeAllowance() {
