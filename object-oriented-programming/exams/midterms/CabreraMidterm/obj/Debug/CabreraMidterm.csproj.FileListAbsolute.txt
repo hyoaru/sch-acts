@@ -1,0 +1,9 @@
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\bin\Debug\CabreraMidterm.exe.config
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\bin\Debug\CabreraMidterm.exe
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\bin\Debug\CabreraMidterm.pdb
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\obj\Debug\CabreraMidterm.csprojResolveAssemblyReference.cache
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\obj\Debug\CabreraMidterm.MainForm.resources
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\obj\Debug\CabreraMidterm.Properties.Resources.resources
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\obj\Debug\CabreraMidterm.csproj.GenerateResource.Cache
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\obj\Debug\CabreraMidterm.exe
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Midterms\CabreraMidterm\CabreraMidterm\obj\Debug\CabreraMidterm.pdb
