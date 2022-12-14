@@ -1,0 +1,11 @@
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\bin\Debug\MyCInheritance.exe.config
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\bin\Debug\MyCInheritance.exe
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\bin\Debug\MyCInheritance.pdb
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\obj\Debug\MyCInheritance.csprojResolveAssemblyReference.cache
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\obj\Debug\MyCInheritance.Properties.Resources.resources
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\obj\Debug\MyCInheritance.csproj.GenerateResource.Cache
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\obj\Debug\MyCInheritance.exe
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\obj\Debug\MyCInheritance.pdb
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\obj\Debug\MyCInheritance.MainForm.resources
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\obj\Debug\MyCInheritance.StudentForm.resources
+D:\Developing\New\C#\MyCInheritance\MyCInheritance\obj\Debug\MyCInheritance.TeacherForm.resources
