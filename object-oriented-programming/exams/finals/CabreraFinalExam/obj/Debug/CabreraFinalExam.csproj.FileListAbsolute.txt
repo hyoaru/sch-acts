@@ -1,0 +1,9 @@
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\bin\Debug\CabreraFinalExam.exe.config
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\bin\Debug\CabreraFinalExam.exe
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\bin\Debug\CabreraFinalExam.pdb
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\obj\Debug\CabreraFinalExam.csprojResolveAssemblyReference.cache
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\obj\Debug\CabreraFinalExam.MainForm.resources
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\obj\Debug\CabreraFinalExam.Properties.Resources.resources
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\obj\Debug\CabreraFinalExam.csproj.GenerateResource.Cache
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\obj\Debug\CabreraFinalExam.exe
+C:\Users\CCSLab-C\Documents\Cabrera\OOP\Finals\CabreraFinalExam\CabreraFinalExam\obj\Debug\CabreraFinalExam.pdb
