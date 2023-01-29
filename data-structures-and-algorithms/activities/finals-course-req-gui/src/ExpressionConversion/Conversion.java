@@ -131,7 +131,7 @@ public class Conversion {
             }
 
         } catch (Exception e) {
-            
+            concludingExpression = " ";
         }
 
         return concludingExpression;
@@ -187,7 +187,7 @@ public class Conversion {
             concludingExpression = stackStringified;
             
         } catch (Exception e) {
-
+            concludingExpression = " ";
         }
 
         return concludingExpression;

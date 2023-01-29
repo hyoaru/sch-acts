@@ -250,10 +250,17 @@ public class MainForm extends javax.swing.JFrame {
     private void btnComputeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComputeActionPerformed
         convertFrom = cmbConvertFrom.getSelectedItem().toString();
         convertTo = cmbConvertTo.getSelectedItem().toString();
-        baseExpression = txtConvertFrom.getText();
-        computeOutputExpression();
-        txtConvertTo.setText(outputExpression);
-        btnShowProcess.setEnabled(true);
+        if (!txtConvertFrom.getText().strip().equals("")){
+            baseExpression = txtConvertFrom.getText();
+            computeOutputExpression();
+            if (!outputExpression.equals(" ")){
+                txtConvertTo.setText(outputExpression);
+                btnShowProcess.setEnabled(true);
+            } else {
+                txtConvertTo.setText("ERROR INPUT");
+            }
+        }
+        
     }//GEN-LAST:event_btnComputeActionPerformed
 
     private void cmbConvertFromItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_cmbConvertFromItemStateChanged
