@@ -50,10 +50,20 @@
         margin-top: 0.5em;
         padding-left: 0em;
     }
+}
 
-    
+@media all and (max-width: 800px){
+    .about-body {
+        font-size: 1em;
+        margin-left: 1em;
+        word-break: keep-all;
+    }
+}
 
-
-    
-    
+@media all and (max-width: 1000px){
+    .about-body {
+        font-size: .9em;
+        margin-left: 1em;
+        word-break: keep-all;
+    }
 }

@@ -5,12 +5,12 @@ html {
 
 /* Components */
 .container {
-    max-width: 80%;
+    max-width: 60%;
     margin: auto;
 }
 
 .flex-container {
-    max-width: 80%;
+    max-width: 70%;
     margin: auto;
     display: flex;
     justify-content: baseline;
