@@ -1,0 +1,141 @@
+/* Global default */
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Components */
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+.flex-container {
+    max-width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: baseline;
+    flex-wrap: nowrap;
+    gap: 2.5em;
+}
+
+.main-image {
+    max-width: 100%;
+    border-radius: 1.2em;
+    box-shadow: 1px 1px 1.2em .25em rgba(0, 0, 0, 0.271);
+    /* display: block; */
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.5em;
+    flex-shrink: 4;
+    /* border-right: 1px solid rgba(1, 1, 1, 0.5) */
+}
+
+.contact-section {
+    font-size: 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-element {
+    display: flex;
+    gap: 1em;
+    color: black;
+}
+
+.subsection-title {
+    text-transform: uppercase;
+    border-bottom: 1px solid rgba(1, 1, 1, 0.5);
+    margin-top: 0em;
+    margin-bottom: 0em;    
+    color: rgba(1, 1, 1, 0.5);
+}
+
+.about-section {
+    width: 100%;
+}
+
+.about-body {
+    font-size: smaller;
+    word-break: keep-all;
+}
+
+.education-section {
+    width: 100%;
+}
+
+.education-element-title {
+    /* text-transform: uppercase; */
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.education-element-subtitle {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.education-element {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+.education-body {
+    margin-top: 0.5em;
+    padding-left: 2em;
+}
+
+.interests-section {
+    width: 100%;
+    align-self: baseline;
+    /* margin-left: 2em; */
+}
+
+.interests-group {
+    /* list-style: none; */
+    font-size: 1em;
+    padding-left: 2em;
+    /* margin-top: .5em; */
+}
+
+.interest-body {
+    color: rgba(1, 1, 1, 0.5);
+}
+
+.projects-section {
+    width: 100%;
+}
+
+.project-element-title {
+    margin-block: 0em;
+}
+
+.project-body {
+    margin-bottom: 0px;
+    margin-top: 0.5em;
+}
+
+.project-element {
+    margin-top: 1em;
+    margin-left: 1em;
+}
+
+
+.right-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2em;
+}
