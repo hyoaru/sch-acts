@@ -20,7 +20,7 @@ void gotoXY(int x, int y) {
 
 int getVerticalOffset(){
   // Vertical offset from origin
-  int offsetVertical = 10;
+  int offsetVertical = 13;
   return offsetVertical;
 }
 
@@ -142,14 +142,16 @@ void printMaze() {
 }
 
 void showStats(int userXPosition, int userYPosition, bool isWayCoordinate) {
-  // Stats
-  gotoXY(0, 0);
-  cout << "X coordinate: " << userXPosition;
-  gotoXY(0, 2);
-  cout << "Y coordinate: " << userYPosition;
-  gotoXY(0, 3);
-  cout << "Is way coordinate: " << isWayCoordinate;
+  int offsetHorizontal = getHorizontalOffset();
+  int offsetVertical = getVerticalOffset();
   
+  // Stats
+  gotoXY(0 + offsetHorizontal, 0 + offsetVertical - 8);
+  cout << "X coordinate: " << userXPosition;
+  gotoXY(0 + offsetHorizontal, 1 + offsetVertical - 8);
+  cout << "Y coordinate: " << userYPosition;
+  gotoXY(0 + offsetHorizontal, 2 + offsetVertical - 8);
+  cout << "Is way coordinate: " << isWayCoordinate;
 }
 
 void moveUser(int userXPosition, int userYPosition) {
@@ -185,6 +187,10 @@ bool isWayCoordinate(int x, int y, int xStart, int xEnd, int arr[xEnd - xStart][
 }
 
 bool checkIfWayCoordinate(int x, int y) {
+  int coords0x1[47-45][2];
+  setArrayContent(45, 47, 0, coords0x1);
+  bool coords0x1IsWayCoordinate = isWayCoordinate(x, y, 45, 47, coords0x1);
+  
   int coords1x1[47-1][2];
   setArrayContent(1, 47, 1, coords1x1);
   bool coords1x1IsWayCoordinate = isWayCoordinate(x, y, 1, 47, coords1x1);
@@ -407,6 +413,7 @@ bool checkIfWayCoordinate(int x, int y) {
   
   int sum = 0;
   bool checkedWayCoordinates[] = {
+    coords0x1IsWayCoordinate,
     coords1x1IsWayCoordinate, coords1x2IsWayCoordinate,
     coords2x1IsWayCoordinate, coords2x2IsWayCoordinate, coords2x3IsWayCoordinate,
     coords3x1IsWayCoordinate, coords3x2IsWayCoordinate, coords3x3IsWayCoordinate, coords3x4IsWayCoordinate, 
@@ -428,18 +435,43 @@ bool checkIfWayCoordinate(int x, int y) {
   
   for (bool checkedWayCoordinate: checkedWayCoordinates) {
     if (checkedWayCoordinate) {
-      sum++;
+      return true;
     }
   }
-  
-  if (sum > 0) {
-    return true;
-  } else {
-    return false;
-  }
+
+  return false;
 }
 
+bool checkIfFinish(int x, int y) {
+  int coords0x1[47-45][2];
+  setArrayContent(45, 47, 0, coords0x1);
+  bool coords0x1IsWayCoordinate = isWayCoordinate(x, y, 45, 47, coords0x1);
 
+  int coords14x1[48-47][2];
+  setArrayContent(47, 48, 14, coords14x1);
+  bool coords14x1IsWayCoordinate = isWayCoordinate(x, y, 47, 48, coords14x1);
+
+  int sum = 0;
+  bool checkedFinishLineWayCoordinates[] = {coords0x1IsWayCoordinate, coords14x1IsWayCoordinate};
+  
+  for (bool checkedFinishLineWayCoordinate: checkedFinishLineWayCoordinates) {
+    if (checkedFinishLineWayCoordinate) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
+void showSuccessMessage() {
+  int offsetHorizontal = getHorizontalOffset();
+  int offsetVertical = getVerticalOffset();
+  
+  gotoXY(0 + offsetHorizontal, 0 + offsetVertical - 4);
+  cout << "My grades better be high sir";
+  gotoXY(0 + offsetHorizontal, 1 + offsetVertical - 4);
+  cout << "pls dami ko na sama ng loob sa language na to";
+}
 
 int main() {
   int offsetVertical = getVerticalOffset();
@@ -480,11 +512,17 @@ int main() {
     moveUser(userXPosition, userYPosition);
     bool isWayCoordinate = checkIfWayCoordinate(userXPosition, userYPosition);
     showStats(userXPosition - offsetHorizontal, userYPosition - offsetVertical, isWayCoordinate);
-    bool isCollidingWithWalls = !isWayCoordinate;
     
+    bool isUserInFinishLine = checkIfFinish(userXPosition, userYPosition);
+    if (isUserInFinishLine) {
+      showSuccessMessage();
+    }
+    
+    bool isCollidingWithWalls = !isWayCoordinate;
     if (isCollidingWithWalls) {
       userXPosition = initialUserXPosition;
       userYPosition = initialUserYPosition;
     }
+
   }
 }
