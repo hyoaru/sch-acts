@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CC106</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+
+<body>
+    <div style="height: 3rem;"></div>
+    <div class="container">
+        <div class="text-center font-monospace text-uppercase mb-4">
+            <h1 class="pb-0 mb-0 fw-bold">Cabrera, Jen Jade B.</h1>
+            <span>BSCS - 2nd Year</span>
+        </div>
+        <div class="row g-5">
+            <div class="col-12 col-md-6">
+                <div class="shadow rounded-5 p-5">
+                    <h3 class="mb-3">Calculate from operation</h3>
+                    <div class="form-group">
+                        <div class="mb-3">
+                            <label for="" class="form-label">Operation</label>
+                            <select id="operationList" class="form-select">
+                                <option value="noSelected" selected>Select operation</option>
+                                <option value="operationAdd">Add</option>
+                                <option value="operationMultiply">Multiply</option>
+                                <option value="operationDivide">Divide</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">First number</label>
+                            <input type="number" id="firstNumber" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Second number</label>
+                            <input type="number" id="secondNumber" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="" class="form-label">Result</label>
+                            <h4 id="calculatedResult"> </h4>
+                        </div>
+    
+                        <button class="btn btn-primary" id="btnCalculate" type="button" onclick="calculateFromOperation()">Calculate</button>
+    
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6">
+                <div class="shadow rounded-5 p-5">
+                    <h3 class="mb-3">Convert to fahrenheit</h3>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Celsius</label>
+                        <div class="input-group">
+                            <input type="number" id="celsius" class="form-control">
+                            <span class="input-group-text">°C</span>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="" class="form-label">Fahrenheit</label>
+                        <h4 id="fahrenheit"></h4> 
+                    </div>
+                    <button type="button" onclick="convertToFahrenheit()" class="btn btn-primary">Convert</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style="height: 7rem;"></div>
+    
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
