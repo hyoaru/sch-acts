@@ -1,17 +1,62 @@
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="{{ current_theme['name'] }}">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Employee</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/solid.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/regular.min.css">
 </head>
 
 <body>
+    <header class="border-b">
+        <nav class="container mx-auto mt-2">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                    <a class="font-bold normal-case text-xl" href="{{ url_for('home') }}">
+                        <i class="fa-solid fa-people-roof fa-lg me-6"></i>
+                        Employee Management
+                    </a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost md:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                            <li><a href="{{ url_for('add_employee') }}" class="hover:text-primary font-bold hover:bg-inherit">Add employee</a></li>
+                            <li><a href="{{ url_for('edit_employee')}}" class="hover:text-primary font-bold hover:bg-inherit">Edit employee</a></li>
+                            <li><a href="{{ url_for('theme_toggle') }}" class="toggle-theme hover:text-primary font-bold hover:bg-inherit focus:bg-inherit"><span>{{ current_theme['label'] }} </span><i class="fa-solid fa-eclipse"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="hidden md:flex">
+                        <ul class="menu menu-horizontal px-1">
+                            <li><a href="{{ url_for('add_employee') }}" class="hover:text-primary font-bold hover:bg-inherit">Add employee</a></li>
+                            <li><a href="{{ url_for('edit_employee')}}" class="hover:text-primary font-bold hover:bg-inherit">Edit employee</a></li>
+                            <li><a href="{{ url_for('theme_toggle') }}" class="toggle-theme hover:text-primary font-bold hover:bg-inherit focus:bg-inherit"><span>{{ current_theme['label'] }} </span><i class="fa-solid fa-circle-half-stroke"></i></a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
     {% block content %}
     {% endblock content %}
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="{{ url_for('static', filename = 'js/script.js') }}"></script>
 </body>
 
 </html>

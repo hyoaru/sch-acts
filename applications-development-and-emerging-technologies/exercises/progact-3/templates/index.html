@@ -1,59 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-    <div class="container mx-auto max-w-5xl mt-8 md:mt-24">
+    <div class="container mx-auto">
         <!-- <h1 class="text-5xl font-black text-center">Employees</h1> -->
-        <div class="grid grid-cols-1 gap-4 md:grid-cols-5">
-            <div class="md:col-span-2 md:drop-shadow-xl bg-neutral-content p-12 rounded-2xl">
-                <h1 class="text-3xl font-bold text-center mb-5 text-neutral">Add employees</h1>
-                <form action="" method="post">
-                    {{ form.hidden_tag() }}
-                    <div class="grid grid-flow-row auto-rows-max gap-2">
-                        {{ form.email(class="input input-bordered w-full", placeholder="Employee email") }}
-                        {{ form.first_name(class="input input-bordered w-full", placeholder="Employee first name") }}
-                        {{ form.middle_name(class="input input-bordered w-full", placeholder="Employee middle name") }}
-                        {{ form.last_name(class="input input-bordered w-full", placeholder="Employee last name") }}
-                        <div class="form-control">
-                            <label class="label-text text-neutral">Employee's birthday</label>
-                            {{ form.birthday(class="input input-bordered w-full text-inherit") }}
+        <div class="p-12">
+            <div class="flex justify-between items-center mb-5">
+                <h1 class="text-3xl font-bold ">Employee list</h1>
+                <form action="" role="search">
+                    <div class="form-control">
+                        <div class="input-group">
+                            <input type="text" name="keyword" class="input input-bordered" placeholder="Search">
+                            <button class="btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
-
-                        <div class="grid grid-cols-1 gap-2 md:grid-cols-2">
-                            {{ form.submit(class="btn btn-primary btn-active") }}
-                            <a href="{{ url_for('employee_delete_all') }}" class="btn btn-error">Delete all</a>
-                        </div>
-    
                     </div>
                 </form>
             </div>
-            <div class="md:col-span-3 md:drop-shadow-xl bg-neutral-content p-12 rounded-2xl">
-                <h1 class="text-3xl font-bold text-center text-neutral mb-5">Employee list</h1>
-                <div class="overflow-x-auto">
-                    <table class="table table-compact w-full">
-                        <thead>
-                            <tr>
-                                <th>Id</th>
-                                <th>First Name</th>
-                                <th>Middle Name</th>
-                                <th>Last Name</th>
-                                <th>Birthday</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {% if employees %} 
-                                {% for employee in employees %}
-                                    <tr>
-                                        <td>{{ employee.id }}</td>
-                                        <td>{{ employee.first_name }}</td>
-                                        <td>{{ employee.middle_name }}</td>
-                                        <td>{{ employee.last_name }}</td>
-                                        <td>{{ employee.birthday }}</td>
-                                    </tr>
-                                {% endfor %}
-                            {% endif %}
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+            {% include 'employees.html' %}
         </div>
     </div>
 {% endblock content %}

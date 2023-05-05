@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container mx-auto">
+        <!-- <h1 class="text-5xl font-black text-center">Employees</h1> -->
+        <div class="grid grid-cols-1 gap-1 lg:grid-cols-12">
+            <div class="lg:col-span-4 p-12">
+                <h1 class="text-3xl font-bold text-center mb-5 ">Add employees</h1>
+                <form action="" method="post">
+                    {{ form.hidden_tag() }}
+                    <div class="grid grid-flow-row auto-rows-max gap-2">
+                        {{ form.email(class="input input-bordered w-full", placeholder="Employee email") }}
+                        {{ form.first_name(class="input input-bordered w-full", placeholder="Employee first name") }}
+                        {{ form.middle_name(class="input input-bordered w-full", placeholder="Employee middle name") }}
+                        {{ form.last_name(class="input input-bordered w-full", placeholder="Employee last name") }}
+                        <div class="form-control">
+                            <label class="label-text ">Employee's birthday</label>
+                            {{ form.birthday(class="input input-bordered w-full text-inherit") }}
+                        </div>
+
+                        <div class="grid gap-2 grid-cols-2 mt-2">
+                            {{ form.submit(class="btn btn-primary btn-active") }}
+                            <a href="{{ url_for('employee_delete_all') }}" class="btn btn-error">Delete all</a>
+                        </div>
+    
+                    </div>
+                </form>
+            </div>
+            <div class="lg:col-span-8 p-12">
+                <h1 class="text-3xl font-bold text-center  mb-5">Employee list</h1>
+                {% include 'employees.html' %}
+            </div>
+        </div>
+    </div>
+{% endblock content %}
