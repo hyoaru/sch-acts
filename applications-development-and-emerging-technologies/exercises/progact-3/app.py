@@ -13,7 +13,7 @@ themes = {
 
 @app.context_processor
 def inject_global_elements():
-    current_theme = themes['light'] if session['current_theme'] is None else session['current_theme']
+    current_theme = themes['light'] if session.get('current_theme') is None else session['current_theme']
     employees = Employee.query.all()
     return dict(employees = employees, current_theme = current_theme)
 
@@ -64,7 +64,6 @@ def add_employee():
         database.session.add(employee)
         database.session.commit()
         print("Succesfully created employee")
-        return redirect(url_for('home'))    
     return render_template('add.html', form = form)
 
 
@@ -83,18 +82,16 @@ def edit_employee():
 
         database.session.commit()
         print("Changes succesfully saved")
-        return redirect(url_for('home'))  
-
     return render_template('edit.html', form = form, employee = employee)
       
 
 
 @app.route("/employee/delete_all")
-def employee_delete_all():
+def delete_employee_all():
     with app.app_context():
         database.drop_all()
         database.create_all()
-    return redirect(url_for('home'))
+    return redirect(request.referrer)
 
 
 if __name__ == "__main__":

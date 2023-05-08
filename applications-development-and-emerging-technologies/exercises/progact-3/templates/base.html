@@ -16,15 +16,15 @@
 <body>
     <header class="border-b">
         <nav class="container mx-auto mt-2">
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
+            <div class="navbar bg-base-100 flex">
+                <div class="flex-1">
                     <a class="font-bold normal-case text-xl" href="{{ url_for('home') }}">
                         <i class="fa-solid fa-people-roof fa-lg me-6"></i>
                         Employee Management
                     </a>
                 </div>
 
-                <div class="navbar-end">
+                <div class="">
                     <div class="dropdown dropdown-end">
                         <label tabindex="0" class="btn btn-ghost md:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
@@ -37,6 +37,7 @@
                             class="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                             <li><a href="{{ url_for('add_employee') }}" class="hover:text-primary font-bold hover:bg-inherit">Add employee</a></li>
                             <li><a href="{{ url_for('edit_employee')}}" class="hover:text-primary font-bold hover:bg-inherit">Edit employee</a></li>
+                            <li><a href="{{ url_for('delete_employee_all')}}" class="hover:text-primary font-bold hover:bg-inherit text-danger">Delete all employee</a></li>
                             <li><a href="{{ url_for('theme_toggle') }}" class="toggle-theme hover:text-primary font-bold hover:bg-inherit focus:bg-inherit"><span>{{ current_theme['label'] }} </span><i class="fa-solid fa-eclipse"></i></a></li>
                         </ul>
                     </div>
@@ -45,6 +46,7 @@
                         <ul class="menu menu-horizontal px-1">
                             <li><a href="{{ url_for('add_employee') }}" class="hover:text-primary font-bold hover:bg-inherit">Add employee</a></li>
                             <li><a href="{{ url_for('edit_employee')}}" class="hover:text-primary font-bold hover:bg-inherit">Edit employee</a></li>
+                            <li><a href="{{ url_for('delete_employee_all')}}" class="hover:text-primary font-bold hover:bg-inherit text-error">Delete all employee</a></li>
                             <li><a href="{{ url_for('theme_toggle') }}" class="toggle-theme hover:text-primary font-bold hover:bg-inherit focus:bg-inherit"><span>{{ current_theme['label'] }} </span><i class="fa-solid fa-circle-half-stroke"></i></a></li>
                             
                         </ul>
