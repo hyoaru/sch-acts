@@ -65,6 +65,8 @@ def add_employee():
         database.session.add(employee)
         database.session.commit()
         print("Succesfully created employee")
+        return redirect(request.referrer)
+
     return render_template('add.html', form = form)
 
 
@@ -83,6 +85,8 @@ def edit_employee():
 
         database.session.commit()
         print("Changes succesfully saved")
+        return redirect(request.referrer)
+
     return render_template('edit.html', form = form, employee = employee)
       
 
