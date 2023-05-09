@@ -13,7 +13,8 @@ themes = {
 
 @app.context_processor
 def inject_global_elements():
-    current_theme = themes['light'] if session.get('current_theme') is None else session['current_theme']
+    session['current_theme'] = themes['light'] if session.get('current_theme') is None else session['current_theme']
+    current_theme = session['current_theme']
     employees = Employee.query.all()
     return dict(employees = employees, current_theme = current_theme)
 
