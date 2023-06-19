@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Miriam Libre
+- Font Author: Copyright 2016 Michal Sahar. All rights reserved.
+- Font Source: http://fonts.gstatic.com/s/miriamlibre/v13/DdT-798HsHwubBAqfkcBTL_X3LbbRcC7_-Z7Hg.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
